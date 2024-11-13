@@ -1,13 +1,13 @@
 ﻿-- Ovo je SQL skripta
-
+-- prebacujem se na master
 use master;
-go 
+go --brišem postojeću bazu
 
 drop database if exists edunovawp6;
 go
 
 create database edunovawp6;
-go
+go --kreiram bazu
 
 use edunovawp6;
 go
