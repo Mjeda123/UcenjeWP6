@@ -19,7 +19,7 @@ naziv varchar(50) not null
 create table film(
 sifra int not null primary key identity(1,1),
 naziv varchar(50) not null,
-zanr varchar(50) not null
+zanr varchar(50)
 );
 
 create table projekcija(
@@ -42,4 +42,3 @@ ime varchar(50) not null,
 prezime varchar(50) not null,
 karte int not null references karte(sifra)
 );
-
