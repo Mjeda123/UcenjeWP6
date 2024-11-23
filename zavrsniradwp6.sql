@@ -41,3 +41,20 @@ cijena decimal(18,2) not null,
 gledatelji int not null references gledatelji(sifra),
 projekcija int not null references projekcija(sifra)
 );
+
+insert into dvorane (naziv)
+values ('A'),
+('B'),
+('C'),
+('D');
+
+insert into film (naziv, zanr)
+values ('Proslava','Drama'),
+('Dražen','Drama'),
+('Divlj Robot','Animirani'),
+('Orašar','Opera'),
+('Transformers Početak','Animirani'),
+('Crveni','Avantura'),
+('Heretik','Horor'),
+('Fatalna četvorka','Komedija'),
+
