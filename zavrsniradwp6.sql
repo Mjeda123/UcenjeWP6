@@ -1,13 +1,13 @@
 ﻿use master;
 go 
 
-drop database if exists zavrsniradwp6;
+drop database if exists kinowp6;
 go
 
-create database zavrsniradwp6 collate Croatian_CI_AS;
+create database kinowp6 collate Croatian_CI_AS;
 go 
 
-use zavrsniradwp6;
+use kinowp6;
 go
 
 
@@ -25,20 +25,19 @@ zanr varchar(50)
 create table projekcija(
 sifra int not null primary key identity(1,1),
 film int not null references film(sifra),
-termin time not null,
+termin datetime not null,
 dvorane int not null references dvorane(sifra),
-datum date not null
-);
-
-create table karte(
-sifra int not null primary key identity(1,1),
-cijena decimal(18,2) not null,
-projekcija int not null references projekcija(sifra)
 );
 
 create table gledatelji(
 sifra int not null primary key identity(1,1),
 ime varchar(50) not null,
-prezime varchar(50) not null,
-karte int not null references karte(sifra)
+prezime varchar(50) not null
+);
+
+create table karte(
+sifra int not null primary key identity(1,1),
+cijena decimal(18,2) not null,
+gledatelji int not null references gledatelji(sifra),
+projekcija int not null references projekcija(sifra)
 );
