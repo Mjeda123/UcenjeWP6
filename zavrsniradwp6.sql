@@ -69,7 +69,7 @@ values (1,'2024-11-26 18:25',1),
 (3,'2024-11-30 11:00',3),
 (3,'2024-11-30 15:10',3),
 (3,'2024-12-01 11:00',4),
-(3,'2024-11-31 15:10',4),
+(3,'2024-12-01 15:10',4),
 (4,'2024-12-17 20:00',3),
 (5,'2024-12-01 18:30',2),
 (6,'2024-11-30 20:00',4),
@@ -83,28 +83,29 @@ values (1,'2024-11-26 18:25',1),
 (10,'2024-12-02 19:15',1),
 (10,'2024-12-03 18:45',3);
 
---insert into gledatelji (ime, prezime)
---values ('Ivan','Ivić'),
---('Jelena','Tomas'),
---('Luka','Kozar'),
---('Tamara','Novak'),
---('Matej','Marić'),
---('Jasna','Rašić'),
---('Renato','Mesarić'),
---('Mirela','Tesarić'),
---('Dominik','Šarić'),
---('Ana','Horvat');
+insert into gledatelji (ime, prezime)
+values ('Ivan','Ivić'),
+('Jelena','Tomas'),
+('Luka','Kozar'),
+('Tamara','Novak'),
+('Matej','Marić'),
+('Jasna','Rašić'),
+('Renato','Mesarić'),
+('Mirela','Tesarić'),
+('Dominik','Šarić'),
+('Ana','Horvat');
 
---insert into karte (cijena, gledatelji, projekcija)
---values (15,1,1),
---(15,1,2),
---(15,2,2),
---(15,3,3),
---(20,4,4),
---(7,5,5),
---(15,6,6),
---(15,7,7),
---(15,8,8),
---(15,9,9),
---(15,10,10);
+insert into karte (cijena, gledatelji, projekcija)
+values (15,1,1),
+(15,1,2),
+(15,2,2),
+(15,3,3),
+(20,4,4),
+(7,5,5),
+(15,6,6),
+(15,7,7),
+(15,8,8),
+(15,9,9),
+(15,10,10);
+
 
