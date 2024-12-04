@@ -1,14 +1,24 @@
-﻿using Ucenje;
+﻿
 
-E01UlazIzlaz.Izvedi();
+using Ucenje;
 
+E03Operatori.Izvodi();
 
-//Ovo je komentar jedna linija
+//E02VarijableTipoviPodataka.Izvedi();
+
+//E02VarijableTipoviPodataka.Izvedi();
+
+//E01UlazIzlaz.Izvedi();
+
+// komentar jedna linija
 
 /*
- * Komentar više linija
+
+Komentar više linija 
+
+
  */
 
 // See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Pozdrav Svijetu ČŠĆDŽ čšćdž");
+//Console.WriteLine("Pozdrav Svijetu ČŠĆĐŽ čšćđž");
 //Console.WriteLine("Hello Osijek");
