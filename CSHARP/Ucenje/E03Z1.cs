@@ -10,9 +10,9 @@ namespace Ucenje
     {
         public static void Izvedi()
         {
-            Console.WriteLine("E03");
-            //Console.WriteLine("Unesi cijeli broj: ");
-            //int broj = int.Parse(Console.ReadLine());
+            //Console.WriteLine("E03");
+            Console.WriteLine("Unesi cijeli broj: ");
+            int broj = int.Parse(Console.ReadLine());
             
 
 
