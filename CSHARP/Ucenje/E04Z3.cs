@@ -10,14 +10,14 @@ namespace Ucenje
     {
         public static void Izvedi()
         {
-            //Console.WriteLine("E04");
+            Console.WriteLine("E04");
 
-            Console.WriteLine("Unesi jedan cijeli broj: ");
-            int broj = int.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi drugi cijeli broj: ");
-            int broj = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Unesi jedan cijeli broj: ");
+            //int broj = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Unesi drugi cijeli broj: ");
+            //int broj = int.Parse(Console.ReadLine());
 
-            if(a+b)
+            //if(a+b)
 
 
 
