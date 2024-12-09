@@ -94,6 +94,38 @@ namespace Ucenje
                 Console.WriteLine();
             }
 
+            for(int i = 0; i < 10; i++)
+            {
+                if (i == 3)
+                {
+                    continue;
+                }
+
+                if (i == 7)
+                {
+                    break;
+                }
+
+                Console.WriteLine(i);
+            }
+
+            //DZ saznati kako prekinuti ugnježđenu petlju (iz najdublje vanjsku)
+
+            // kako postići beskonačnu petlju
+            // OVO nije beskonačna petlja
+            for (int i = 0; i >= 0; i++)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+
+            for(; ; )
+            {
+                Console.WriteLine(new Random().NextInt64() +"" + new Random().NextInt64() + "" + new Random().NextInt64());
+                Thread.Sleep(300);
+                break; // ovo maknuti ako hoćemo besknonačno prikaz brojeva
+            }
+
            
 
 
