@@ -12,6 +12,25 @@ namespace Ucenje
     internal class E03C1
     {
 
+        public static void Izvedi()
+        {
+            //Console.WriteLine("E03");
+
+            Console.WriteLine("Unesi cijeli broj: ");
+            int ab = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Unesi cijeli broj: ");
+            int bc = int.Parse(Console.ReadLine());
+
+            //int sum = ab + bc;
+
+            Console.WriteLine(bc / ab);
+
+            //Console.WriteLine();
+
+
+        }
+
 
 
 
