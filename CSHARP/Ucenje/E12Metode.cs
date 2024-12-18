@@ -107,6 +107,27 @@ namespace Ucenje
             //return 0;
         }
 
+        public static string UcitajString(string poruka) 
+        {
+            string s = "";
+            while (true) 
+            {
+                Console.Write(poruka);
+                s += Console.ReadLine().Trim();
+                if(s.Length == 0)
+                {
+                    Console.WriteLine("Obavezan unos");
+                    continue;
+                }
+                return s;
+            }
+            
+            
+            
+            //return "";
+        
+        }
+
 
 
     }
