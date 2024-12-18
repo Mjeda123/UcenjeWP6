@@ -10,7 +10,9 @@ namespace Ucenje
     {
         public static void Izvedi()
         {
-            Zad1();
+            //Zad1();
+            Zad2();
+            
         }
 
         private static void Zad1()
@@ -28,6 +30,14 @@ namespace Ucenje
                 Console.WriteLine(ime.Length);
             }
             
+        }
+
+        private static void Zad2()
+        {
+            string ime = E12Metode.UcitajString("Unesi ime: ");
+            string prezime = E12Metode.UcitajString("Unesi prezime: ");
+            Console.WriteLine("{0} {1}", prezime, ime);
+
         }
 
 
