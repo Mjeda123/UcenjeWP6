@@ -68,12 +68,12 @@ namespace Ucenje
         private static void NaslovPrograma(string naslov)
         {
             //Console.WriteLine("********************");
-            Zvjezdice(naslov.Length);
+            NaglasiNaslov(naslov.Length);
             Console.WriteLine(naslov);
-            Zvjezdice(naslov.Length);
+            NaglasiNaslov(naslov.Length);
         }
 
-        private static void Zvjezdice(int komada)
+        private static void NaglasiNaslov(int komada)
         {
             for (int i = 0; i < komada; i++)
             {
