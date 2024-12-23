@@ -18,7 +18,7 @@ namespace Ucenje
         public static void Izvedi()
         {
             string s = "Ružanedoodenažur";
-            Console.WriteLine(string.Join);
+            Console.WriteLine(string.Join(';', s.ToCharArray()));
 
             Console.WriteLine("palindrom");
             string izraz = E12Metode.UcitajString("Unesi izraz za provjeru palindroma: ");

@@ -2,11 +2,11 @@
 
 using Ucenje;
 
-E10Z3.Izvedi();
+//E10Z3.Izvedi();
 
 //E15Subota.Izvedi();
 
-//E14Vjezbanje.Izvedi();
+E14Vjezbanje.Izvedi();
 
 //E13Z2.Izvedi();
 
