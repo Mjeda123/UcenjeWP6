@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Ucenje
@@ -30,27 +31,28 @@ namespace Ucenje
                 "Tablica množenja",
                 "Jedinična vrijednost",
                 "Broj znakova naziva mjesta",
-                "Zbroj znamenki broja"
+                "Zbroj znamenki broja",
+                "Prebrojavanje broja znakova"
             };
 
             Console.WriteLine();
             Console.WriteLine("IZBORNIK");
-            
-            for(int i = 0; i < programi.Length; i++)
+
+            for (int i = 0; i < programi.Length; i++)
             {
-                Console.WriteLine("{0}. {1}", i+1, programi[i]);
+                Console.WriteLine("{0}. {1}", i + 1, programi[i]);
             }
 
 
             Console.WriteLine("0. Izlaz iz programa");
             OdabirOpcijeIzbornika(programi.Length);
-        
+
 
         }
 
         private static void OdabirOpcijeIzbornika(int brojPrograma)
         {
-            switch(E12Metode.UcitajCijeliBroj("Odaberi stavku izvornika: ",0, brojPrograma))
+            switch (E12Metode.UcitajCijeliBroj("Odaberi stavku izvornika: ", 0, brojPrograma))
             {
                 case 0:
                     break;
@@ -74,7 +76,65 @@ namespace Ucenje
                     ZbrojZnameniBroja();
                     Izbornik();
                     break;
+                case 6:
+                    PrebrojavanjeBrojaZnakova();
+                    Izbornik();
+                    break;
             }
+        }
+
+        private static void PrebrojavanjeBrojaZnakova()
+        {
+            NaslovPrograma("Prebrojavanje znakova u izrazu");
+
+            string izraz = E12Metode.UcitajString("Unesi izraz: ").ToLower();
+
+            int[] niz = new int[izraz.Length];
+            bool[] ispisi = new bool[izraz.Length];
+            int b;
+            for (int i = 0; i < izraz.Length; i++)
+            {
+                b = 0;
+                foreach (char c2 in izraz)
+                {
+                    if (izraz[i] == c2)
+                    {
+                        b++;
+                    }
+                }
+                niz[i] = b;
+                if (b > 1)
+                {
+                    for (int j = 0; j < izraz.Length; j++)
+                    {
+                        if (izraz[i] == izraz[j])
+                        {
+                            ispisi[j] = true;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    ispisi[i] = true;
+                }
+
+            }
+            //Console.WriteLine(string.Join(",",ispisi));
+            for (int i = 0; i < izraz.Length; i++)
+            {
+                if (ispisi[i] && izraz[i] != ' ')
+                {
+                Console.WriteLine("{0}: ({1})", izraz[i], niz[i]);
+            }
+
+        }
+        Console.WriteLine();
+        
+        
+
+
+            
         }
 
         private static void ZbrojZnameniBroja()
