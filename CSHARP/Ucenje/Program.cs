@@ -2,11 +2,17 @@
 
 using Ucenje;
 
+E16ZD3.Izvedi();
+
+//E16ZD2.Izvedi();
+
+//E16ZD1.Izvedi();
+
 //E10Z3.Izvedi();
 
 //E15Subota.Izvedi();
 
-E14Vjezbanje.Izvedi();
+//E14Vjezbanje.Izvedi();
 
 //E13Z2.Izvedi();
 
@@ -43,10 +49,6 @@ E14Vjezbanje.Izvedi();
 //E07Z1.Izvedi();
 
 //E07FordPetlja.Izvedi();
-
-//E03Z1.Izvedi();
-
-//E04Z6.Izvedi();
 
 //E04Z5.Izvedi();
 
