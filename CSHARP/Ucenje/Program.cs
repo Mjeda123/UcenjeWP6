@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-E16ZD10.Izvedi();
+E16GeneratorLozinki.Izvedi();
+
+//E16ZD10.Izvedi();
 
 //E16ZD9.Izvedi();
 
