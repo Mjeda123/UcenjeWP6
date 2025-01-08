@@ -2,7 +2,15 @@
 
 using Ucenje;
 
-E16ZD6.Izvedi();
+E16ZD10.Izvedi();
+
+//E16ZD9.Izvedi();
+
+//E16ZD8.Izvedi();
+
+//E16ZD7.Izvedi();
+
+//E16ZD6.Izvedi();
 
 //E16ZD5.Izvedi();
 
