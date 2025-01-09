@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-E12Z2.Izvedi();
+E16CiklicnaMatrica.Izvedi();
+
+//E12Z2.Izvedi();
 
 //E16GeneratorLozinki.Izvedi();
 
