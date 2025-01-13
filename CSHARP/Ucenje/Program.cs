@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-E16CiklicnaMatrica.Izvedi();
+new Ucenje.E17KlasaObjekt.Program();
+
+//E16CiklicnaMatrica.Izvedi();
 
 //E12Z2.Izvedi();
 
