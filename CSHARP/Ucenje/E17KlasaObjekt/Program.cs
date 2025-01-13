@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ucenje.E17KlasaObjekt.Edunova;
 
 namespace Ucenje.E17KlasaObjekt
 {
@@ -34,7 +35,40 @@ namespace Ucenje.E17KlasaObjekt
 
             //osoba.Mjesto = mjesto;
 
-            Console.WriteLine(osoba.Mjesto.Naziv);
+            //Console.WriteLine(osoba.Mjesto.Naziv);
+
+            if (osoba.Mjesto != null)
+            {
+                Console.WriteLine(osoba.Mjesto.Naziv);
+            }
+
+            Console.WriteLine(osoba.Mjesto?.Naziv);
+
+            osoba.Mjesto = new Mjesto() { Naziv = "Osijek" };
+
+            Console.WriteLine(osoba.Mjesto.Zupanija?.Zupan ?? "Prazno");
+
+            Smjer smjer = new Smjer() { Naziv = "Web Programiranje" };
+            
+            Grupa grupa = new Grupa() { Naziv="wp6",Smjer=smjer};
+
+
+            Polaznik[] polazniciNiz = new Polaznik[2];
+
+            polazniciNiz[0] = new Polaznik() { Ime = "Pero" };
+            polazniciNiz[1] = new Polaznik() { Ime = "Marija" };
+            
+            grupa.Polaznici = polazniciNiz;
+
+            Console.WriteLine(grupa.Naziv);
+            Console.WriteLine(grupa.Smjer.Naziv);
+            foreach(Polaznik p in grupa.Polaznici)
+            {
+                Console.WriteLine("{0} {1}", p.Ime, p.Prezime);
+            }
+
+            Console.WriteLine("***********************");
+            grupa.DetaljiGrupe();
         
         }
     }
