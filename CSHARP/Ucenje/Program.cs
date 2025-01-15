@@ -2,7 +2,7 @@
 
 using Ucenje;
 
-new Ucenje.E18NasljedivanjePolimorfizam.Program();
+new Ucenje.E18NasljedivanjePolimorfizam.Program("E18");
 
 //new Ucenje.E17KlasaObjekt.Program();
 
