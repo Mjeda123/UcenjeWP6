@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-new Ucenje.E17KlasaObjekt.Program();
+new Ucenje.E18NasljedivanjePolimorfizam.Program();
+
+//new Ucenje.E17KlasaObjekt.Program();
 
 //E16CiklicnaMatrica.Izvedi();
 
