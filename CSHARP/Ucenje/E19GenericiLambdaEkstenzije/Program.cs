@@ -69,6 +69,61 @@ namespace Ucenje.E19GenericiLambdaEkstenzije
             {
                 Console.WriteLine(smjer.Naziv);
             }
+
+            var datumi = new List<DateTime>();
+            datumi.Add(new DateTime(1997, 6, 12));
+            datumi.Add(DateTime.Now);
+
+            foreach(var d in datumi)
+            {
+                Console.WriteLine(d);
+            }
+
+            Console.WriteLine(KlasicnaMetoda(5,5));
+
+            var Zbroj = (int a, int b) => a + b;
+
+            Console.WriteLine(Zbroj(5,5));
+
+            var Algoritam = (int x, int y) =>
+            {
+                var z = 0;
+                z = ++x;
+                y += z;
+                return x + y + z;
+            };
+
+            Console.WriteLine(Algoritam(2,3));
+
+            var Parni = (int i) => i % 2 == 0;
+
+            Console.WriteLine(Parni(7) ? "Parni" : "Neparni");
+
+            String ime = "Ana";
+
+            Console.WriteLine(ime.LastOrDefault());
+
+            Console.WriteLine(smjerovi.LastOrDefault());
+
+            s.Ispisi();
+
+            var p = new Polaznik() { Sifra = 7, Ime = "Pero" };
+
+            p.Ispisi();
+
+            var nesto = new
+            {
+                Ime = "Pero",
+                Grad = "Osijek",
+                Smjer = s
+            };
+
+
+        }
+
+        private int KlasicnaMetoda(int a, int b)
+        {
+            return a + b;
         }
     }
 }

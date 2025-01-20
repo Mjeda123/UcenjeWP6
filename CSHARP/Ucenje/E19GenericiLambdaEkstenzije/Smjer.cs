@@ -25,5 +25,10 @@ namespace Ucenje.E19GenericiLambdaEkstenzije
         {
             return Naziv + " stari " ?? "";
         }
+
+        public override string ToString() 
+        {
+            return Naziv ?? "";
+        }
     }
 }
