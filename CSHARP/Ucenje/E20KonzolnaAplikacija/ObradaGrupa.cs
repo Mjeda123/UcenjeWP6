@@ -16,6 +16,22 @@ namespace Ucenje.E20KonzolnaAplikacija
         public ObradaGrupa(Izbornik izbornik):this()
         {
             this.Izbornik = izbornik;
+            Ucitajtetnepodatke();
+        }
+
+        private void Ucitajtetnepodatke()
+        {
+            var polaznici = new List<Polaznik>();
+            polaznici.Add(Izbornik.ObradaPolaznik.Polaznici[0]);
+            polaznici.Add(Izbornik.ObradaPolaznik.Polaznici[1]);
+            Grupe.Add(new()
+            {
+                Naziv = "Grupa 1",
+                Smjer = Izbornik.ObradaSmjer.Smjerovi[0],
+                Predavac = "Predavac 1",
+                VelicinaGrupe = 10,
+                Polaznici = polaznici
+            });
         }
 
         public void PrikaziIzbornik()
@@ -25,7 +41,8 @@ namespace Ucenje.E20KonzolnaAplikacija
             Console.WriteLine("2. Unos nove grupe");
             Console.WriteLine("3. Promjena podataka postojeće grupe");
             Console.WriteLine("4. Brisanje grupe");
-            Console.WriteLine("5. Povratak na glavni izbornik");
+            Console.WriteLine("5. Brisanje polaznika iz grupe");
+            Console.WriteLine("6. Povratak na glavni izbornik");
             OdabirOpcijeIzbornika();
         }
 
@@ -49,10 +66,30 @@ namespace Ucenje.E20KonzolnaAplikacija
                     ObrisiGrupu();
                     PrikaziIzbornik();
                     break;
-                case 5:                    
+                case 5:
+                    ObrisiPolaznikaIzGrupe();
+                    PrikaziIzbornik();
+                    break;
+                case 6:                    
                     Console.Clear();
                     break;
             }
+        }
+
+        private void ObrisiPolaznikaIzGrupe()
+        {
+            PrikaziGrupe();
+            var g = Grupe[
+                Pomocno.UcitajRasponBroja("Odaberi redni broj grupe na kojima ce se brisati polaznici", 1, Grupe.Count) - 1
+                ];
+
+            Izbornik.ObradaPolaznik.PrikaziPolaznike(g.Polaznici, "Popis polaznika u grupi");
+
+            var odabrani = g.Polaznici[
+                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za brisanje",
+                1, g.Polaznici.Count) - 1
+                ];
+            g.Polaznici.Remove(odabrani);
         }
 
         private void ObrisiGrupu()
@@ -83,10 +120,10 @@ namespace Ucenje.E20KonzolnaAplikacija
                 Pomocno.UcitajRasponBroja("Odaberi redni broj smjera", 1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
 
             g.Predavac = Pomocno.UcitajString("Unesi ime i prezime predavača", 50, true);
-            g.MaksimalnoPolaznika = Pomocno.UcitajRasponBroja("Unesi maksimalno polaznika", 1, 30);
+            g.VelicinaGrupe = Pomocno.UcitajRasponBroja("Unesi Velièinu grupe", 1, 30);
 
             // polaznici
-            g.Polaznici = UcitajPolaznike((int)g.MaksimalnoPolaznika);
+            g.Polaznici = UcitajPolaznike((int)g.VelicinaGrupe);
 
 
         }
@@ -124,10 +161,10 @@ namespace Ucenje.E20KonzolnaAplikacija
                 Pomocno.UcitajRasponBroja("Odaberi redni broj smjera",1, Izbornik.ObradaSmjer.Smjerovi.Count) - 1];
             
             g.Predavac = Pomocno.UcitajString("Unesi ime i prezime predavača", 50, true);
-            g.MaksimalnoPolaznika = Pomocno.UcitajRasponBroja("Unesi maksimalno polaznika", 1, 30);
+            g.VelicinaGrupe = Pomocno.UcitajRasponBroja("Unesi Velicinu grupe", 1, 30);
 
             // polaznici
-            g.Polaznici = UcitajPolaznike((int)g.MaksimalnoPolaznika);
+            g.Polaznici = UcitajPolaznike((int)g.VelicinaGrupe);
 
             Grupe.Add(g);
         }

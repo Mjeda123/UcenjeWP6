@@ -5,65 +5,72 @@ using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
 
 namespace WebAPI9.Controllers
 {
-
     [ApiController]
     [Route("api/v1/[controller]")]
-
     public class HttpMetodeController : ControllerBase
     {
-        [HttpGet]
+        // Počinje ruta
 
+        [HttpGet]
         public string HelloWorld()
         {
-            return "Hello {ime}!";
+            return "Hello World!";
         }
-
+        // Završava ruta
+        // Počinje ruta
 
         [HttpGet]
         [Route("helloworld")]
         public string HelloWorld(string ime)
         {
-            return $"Hello World!";
-
+            return $"Hello {ime}!";
         }
+        // Završava ruta
+        // Počinje ruta
 
         [HttpGet]
-        [RouteAttribute("json")]
+        [Route("json")]
         public IActionResult Json(int sifra, string ime)
         {
             return Ok(new { Sifra = sifra, Ime = ime });
         }
-
-
+        // Završava ruta
+        // Počinje ruta
         [HttpPost]
         public IActionResult Post(Osoba osoba)
         {
             osoba.Ime = "Hello " + osoba.Ime;
             return StatusCode(201, osoba);
         }
+        // Završava ruta
+        // Počinje ruta
 
-
-        [Httpput]
+        [HttpPut]
         public IActionResult Put(Osoba osoba)
         {
-            osoba.Ime = "Hello" + osoba.Ime;
+            osoba.Ime = "Hello " + osoba.Ime;
             return StatusCode(StatusCodes.Status206PartialContent, osoba);
-
         }
-
+        // Završava ruta
+        // Počinje ruta
 
         [HttpDelete]
         public IActionResult Delete(int sifra)
         {
             if (sifra <= 0)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, new { poruka = "Sifra mora biti veća od 0" });
+                return StatusCode(StatusCodes.Status400BadRequest, new { poruka = "Sifra mora biti veca od 0" });
             }
             return StatusCode(StatusCodes.Status204NoContent);
         }
+        // Završava ruta
+
+
+    }
     }
 
 
 
-    
-    }
+
+
+
