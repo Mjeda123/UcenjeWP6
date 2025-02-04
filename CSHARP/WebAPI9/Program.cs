@@ -8,6 +8,10 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<EdunovaContext> (options => {
+optionts.useSqlServer(builder.Configuration.GetConnectionString("EdunovaContext"));
+    )});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
