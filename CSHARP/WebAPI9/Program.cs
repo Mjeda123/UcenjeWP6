@@ -8,9 +8,19 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<EdunovaContext> (options => {
-optionts.useSqlServer(builder.Configuration.GetConnectionString("EdunovaContext"));
-    )});
+builder.Services.AddDbContext<EdunovaContext> (options =>
+{
+    optionts.useSqlServer(builder.Configuration.GetConnectionString("EdunovaContext"));
+});
+
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -28,5 +38,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.MapControllers();
+
+app.UseCors("CorsPolicy");
 
 app.Run();

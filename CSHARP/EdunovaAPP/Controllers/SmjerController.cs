@@ -1,4 +1,5 @@
 ﻿using EdunovaAPP.Data;
+using EdunovaAPP.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdunovaAPP.Controllers
@@ -17,14 +18,14 @@ namespace EdunovaAPP.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //try
-            //{
-                //return Ok(_context.Smjerovi);
-            //}
-            //catch (Execption e)
-            //{
-                //return BadRequestResult(e)
-            //}
+            try
+            {
+                return Ok(_context.Smjerovi);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
 
         [HttpGet]
